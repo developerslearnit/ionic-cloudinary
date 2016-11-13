@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
-
 import { NavController, LoadingController } from 'ionic-angular';
-
 import { Newpost } from '../../pages/newpost/newpost';
-
 import { PostService } from '../../providers/post-service';
 
 @Component({
