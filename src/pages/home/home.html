@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Posts
+    </ion-title>
+    <ion-buttons end>
+      <button  (click)="addNewPhoto()"  ion-button color="dark">
+      <ion-icon name="add"></ion-icon>&nbsp;&nbsp;Add New
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-card *ngFor="let item of posts">
+    <img [src]="item.image_url" alt="">
+    <ion-card-content>
+      <ion-card-title>
+        {{item.title}}
+      </ion-card-title>
+      <p>
+        {{item.description}}
+      </p>
+    </ion-card-content>
+    
+  </ion-card>
+  
+</ion-content>

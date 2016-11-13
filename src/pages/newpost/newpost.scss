@@ -1,0 +1,17 @@
+page-newpost {
+ion-card{
+    margin: 3px !important;
+    width: calc(100% - 6px) !important;
+    .uploadWrap{
+        ion-icon{
+            color:#777;
+            font-size: 150px;
+            text-align: center !important;
+            display: block;
+        }
+    }
+    button{
+        height: 40px !important;
+    }
+}
+}

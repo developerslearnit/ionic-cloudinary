@@ -1,0 +1,45 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>New Post</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-card>
+
+  <ion-card-header>
+    <div *ngIf="imageChosen == 0" class="uploadWrap">
+    <ion-icon (click)="chooseImage()" name="cloud-upload"></ion-icon>
+    </div>
+
+    <div *ngIf="imageChosen == 1" class="img-preview">
+      <img [src]="imagePath" alt="">
+    </div>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-list>
+
+  <ion-item>
+    <ion-label floating>Post Title</ion-label>
+    <ion-input [(ngModel)]="postTitle" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Description</ion-label>
+    <ion-input [(ngModel)]="desc" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+   <button (click)="uploadPhoto()" ion-button full>Upload Image</button>
+  </ion-item>
+
+</ion-list>
+  </ion-card-content>
+
+</ion-card>
+</ion-content>
